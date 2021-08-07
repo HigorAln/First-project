@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+.modalHigor{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    border: 1px solid #000;
+    background-color:rgba(105, 105, 105, 0.692);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-modal{
+    width: 70%;
+    height: 80%;
+    border: 1px solid #000;
+    background-color: white;
+    box-shadow: 0 0 10px #333;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 5% 95%;
+    grid-template-areas: 
+        "fecha fecha"
+        "esquerda direita"
+    ;
+}
+.fechaHigor{
+    grid-area: fecha;
+    border:0;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1%;
+    padding-top: 1%;
+}
+#modalFechar{
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    border:0;
+    box-shadow: 0 0 10px #555;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+#modalFechar:hover{
+    background-color: rgb(224, 224, 224);
+}
+.esquerda{
+    grid-area: esquerda;
+    border:0;
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-top: 90px;
+    padding-right: 50px;
+}
+.esquerda span{
+    font-size: 30px;
+    text-shadow:4px 0 20px rgb(160, 160, 160);
+}
+.esquerda p{
+    padding-top: 30px;
+    font-family: 'Gowun Dodum', sans-serif;
+    letter-spacing: 1px;
+}
+.esquerda input{
+    margin-top: 70px;
+}
+.direita{
+    grid-area: direita;
+    border:0;
+    display: flex;
+    align-items: center;
+}
+.container-direita{
+    width: 90%;
+    padding-right: 10%;
+    height: 70%;
+    border:0;
+    background-image: url('../background/background3.jpg');
+    background-size: 100% 101%;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0 0 10px #555;
+}
+.this-input{
+    padding: 5px;
+    padding-left: 15px;
+    border:1px solid #99844f;
+    border-radius: 25px;
+    width: 350px;
+    height: 50px;
+    outline: none;
+    font-family: 'Gowun Dodum', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+.btn-email{
+    position: relative;
+    top:-2px;
+    left:-99px;
+    width: 100px;
+    height: 60px;
+    padding: 5px;
+    border:0;
+    border-radius: 25px;
+    background-color: #daa520;
+    cursor:pointer;
+    transition: all 0.2s;
+    transform: scale(0.9);
+}
+.btn-email:hover{
+    background-color: #e2b74b;
+    transform: scale(1);
+}
+@media screen and (max-width:1000px) {
+    .container-modal{
+        width: 90%;
+    }
+    .container-modal{
+        width: 70%;
+        height: 50%;
+        grid-template-columns: 100%;
+        grid-template-areas: 
+            "fecha"
+            "esquerda"
+        ;
+    }
+    .btn-email{
+        position: relative;
+        top:0;
+        left:0;
+    }
+    
+    .direita{
+        display: none;
+    }
+    .esquerda{
+        border: 1px solid #000;
+    }
+    
+}
+@media screen and (max-width:660px) {
+   
+    
+}
+@media screen and (max-width:1330px) {
+    .direita{
+        display: none;
+    }
+    .esquerda{
+        width: 100%;
+        border:0
+    }
+    .container-modal{
+        width: 70%;
+        height: 80%;
+        grid-template-columns: 100%;
+        grid-template-areas: 
+            "fecha"
+            "esquerda"
+        ;
+    }
+    .esquerda{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 0px;
+    }
+    .esquerda input{
+        margin-top:10px
+    }
+}
+@media screen and (max-width:582px) {
+    .btn-email{
+        width: 100%;
+        
+    }
+    .this-input{
+        width: 100%;
+    }
+    .esquerda p{
+        font-size: 13px;
+    }
+    
+}
