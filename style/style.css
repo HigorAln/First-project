@@ -35,7 +35,7 @@ body,html{
         ;
     gap:2px;
 }
-header{
+.header{
     margin-top: 0.5%;
     margin-left:1%;
     width: 98%;
@@ -348,6 +348,13 @@ header{
     cursor: pointer;
 }
 
+.tamTeste{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    cursor: none;
+}
+
 @media screen and (max-width:1000px){
     .logo{
         font-size: 23px;
@@ -370,11 +377,28 @@ header{
         height: 80%;
     }
 }
+@media screen and (max-width:767px){
+    .header{
+        grid-template-columns: 30% 50% 20%;
+        grid-template-areas: "logo pesquisa teste";
+        justify-content: space-between;
+    }
+    .logo{
+        font-size: 15px;
+        border:0;
+        margin-left: 10%;
+        width: 100%;
+    }
+    .login{
+        display: none;
+    }
+    
+}
 @media screen and (max-width:660px){
     .pesquisa{
         flex-wrap: wrap;
         justify-content: space-evenly;
-        font-size: 12px;
+        font-size: 8px;
     }
     .colecao{
         flex-wrap: wrap;
@@ -424,6 +448,11 @@ header{
     .verao,.primavera{
         width: 100%;
     }
+    .pesquisa{
+        font-size:15px ;
+        word-spacing: 5px;
+    }
+    
 }
 @media screen and (max-width:384px){
     header{

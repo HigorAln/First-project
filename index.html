@@ -50,26 +50,28 @@
 
     <!-- Parte 1 -->
     <div class='part-1'>
-        <header>
-            <div class='logo'>GangOff</div>
-            
+        <nav class='navbar navbar-expand-md header'>
+            <div class='logo navbar-brand'>GangOff</div>   
         
-            <div class='pesquisa'>
+            <div id='myNav' class='collapse navbar-collapse pesquisa'>
                 <a href='#'>Sapatos</a>
                 <a href='#'>Camisas</a>
                 <a href='#'>Bermudas</a>
                 <a href='#'>Calças</a>
                 <a href='#'>Acessorios</a>
             </div>
-            <div class='login'>
+            <div id='myNav' class='login collapse navbar-collapse'>
                 <form class='formulario' name='login' method="get" action="#">
                     <input type='text' placeholder="User">
                     <input type='text' placeholder="Password">
                     <input class='botao-input' type='submit' value='Login'>
                 </form>
             </div>
+            <div class='navbar-toggler tamTeste' type='button' data-bs-toggle='collapse' data-bs-target="#myNav">
+                <span><img src='./icons/outline_menu_black_24dp.png'></span>
+            </div>
         
-        </header>
+        </nav>
 
         <section class='sessao'>
             <a href='#'>Ajuda</a>
